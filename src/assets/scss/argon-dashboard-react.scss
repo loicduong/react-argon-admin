@@ -17,14 +17,12 @@
 */
 
 // Core
-
 @import 'argon-dashboard/custom/functions';
 @import 'argon-dashboard/custom/variables';
 @import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/mixins';
+@import "argon-dashboard/custom/mixins";
 
-// bootstrap (4.6.0) components
-
+// Components
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
@@ -53,18 +51,15 @@
 @import 'bootstrap/scss/carousel';
 
 // Argon utilities and components
-
-@import 'argon-dashboard/custom/mixins';
 @import 'argon-dashboard/custom/reboot';
 @import 'argon-dashboard/custom/utilities';
+@import "bootstrap/scss/utilities/api";
 @import 'argon-dashboard/custom/components';
 
 // Vendor (Plugins)
-
 @import 'argon-dashboard/custom/vendors';
 
 // Docs components
-
 @import 'argon-dashboard/docs/variables';
 @import 'argon-dashboard/docs/nav';
 @import 'argon-dashboard/docs/clipboard-js';

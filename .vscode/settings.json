@@ -2,8 +2,11 @@
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,vi",
   "cSpell.words": [
-      "antfu",
-      "unocss"
+    "antfu",
+    "daken",
+    "unocss",
+    "unplugin",
+    "zindex"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",

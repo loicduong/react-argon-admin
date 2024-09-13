@@ -1,3 +1,5 @@
+import { Button } from 'reactstrap'
+
 export default function Admin() {
-  return <div>Admin</div>
+  return <Button>Admin</Button>
 }

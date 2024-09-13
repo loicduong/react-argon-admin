@@ -14,7 +14,18 @@
 }
 
 
-@mixin form-validation-state($state, $color, $icon) {
+@mixin form-validation-state(
+  $state,
+  $color,
+  $icon,
+  $tooltip-color: color-contrast($color),
+  $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
+  $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity),
+  $border-color: $color
+) {
+
+  @debug $color;
+
   .#{$state}-feedback {
     display: none;
     width: 100%;
@@ -77,8 +88,8 @@
         color: $color;
 
         &::before {
-          background-color: lighten($color, 25%);
-          border-color: lighten($color, 25%);
+          // background-color: lighten($color, 25%);
+          // border-color: lighten($color, 25%);
         }
       }
 
@@ -89,8 +100,8 @@
 
       &:checked {
         ~ .custom-control-label::before {
-          @include gradient-bg(lighten($color, 10%));
-          border-color: lighten($color, 25%);
+          // @include gradient-bg(lighten($color, 10%));
+          // border-color: lighten($color, 25%);
         }
       }
 
