@@ -1,9 +1,13 @@
 {
   "cSpell.allowCompoundWords": true,
-  "cSpell.language": "en,vi",
+  "cSpell.language": "en,vi,ar",
   "cSpell.words": [
     "antfu",
     "daken",
+    "mcolor",
+    "reduxjs",
+    "signin",
+    "signup",
     "unocss",
     "unplugin",
     "zindex"
