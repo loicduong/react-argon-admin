@@ -72,17 +72,33 @@ export const themeSlice = createSlice({
     },
     toggleDarkMode(state) {
       state.darkMode = !state.darkMode;
-    }
+    },
+    setShowNavbar(state, action: PayloadAction<boolean>) {
+      state.showNavbar = action.payload;
+    },
+    setShowSidenav(state, action: PayloadAction<boolean>) {
+      state.showSidenav = action.payload;
+    },
+    setShowFooter(state, action: PayloadAction<boolean>) {
+      state.showFooter = action.payload;
+    },
+    setHideConfigButton(state, action: PayloadAction<boolean>) {
+      state.hideConfigButton = action.payload;
+    },
   }
 })
 
 export const {
-  toggleConfigurator,
   navbarMinimize,
-  setSidebarType,
-  toggleNavbarFixed,
+  setHideConfigButton,
   setMcolor,
-  toggleDarkMode
+  setShowFooter,
+  setShowNavbar,
+  setShowSidenav,
+  setSidebarType,
+  toggleConfigurator,
+  toggleDarkMode,
+  toggleNavbarFixed,
 } = themeSlice.actions
 
 export function toggleSidebarColor(payload: string) {

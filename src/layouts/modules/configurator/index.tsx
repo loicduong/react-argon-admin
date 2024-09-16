@@ -27,8 +27,7 @@ export default function Configurator({ toggle, className }: Props) {
         className="px-3 py-2 fixed-plugin-button text-dark position-fixed"
         onClick={toggle}
       >
-        <i className="py-2 fa-solid fa-gear"></i>
-        <i className="fa-solid fa-gears"></i>
+        <i className="py-2 fas fa-cog"></i>
       </a>
       <div className="shadow-lg card">
         <div className="pt-3 pb-0 bg-transparent card-header">
