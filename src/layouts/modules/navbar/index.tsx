@@ -3,7 +3,12 @@ import { RootState } from '@/stores'
 import { toggleSidebarColor, navbarMinimize, toggleConfigurator } from '@/stores/modules/theme'
 import Breadcrumb from '@/layouts/modules/breadcrumb'
 
-export default function Navbar() {
+interface Props {
+  className?: string
+  minNav: () => void
+}
+
+export default function Navbar({ className, minNav }: Props) {
   const location = useLocation()
   const [showMenu, setShowMenu] = useState(true)
   const { isRTL } = useSelector((state: RootState) => state.theme)
@@ -16,9 +21,13 @@ export default function Navbar() {
     dispatch(navbarMinimize())
   }
 
+  useEffect(() => {
+    minNav()
+  }, [])
+
   return (
     <nav
-      className={`navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''}`}
+      className={`navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''} ${className}`}
       id="navbarBlur"
       data-scroll="true"
     >
@@ -91,7 +100,11 @@ export default function Navbar() {
                 aria-labelledby="dropdownMenuButton"
               >
                 <li className="mb-2">
-                  <a className="dropdown-item border-radius-md" href="javascript:;">
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                  >
                     <div className="py-1 d-flex">
                       <div className="my-auto">
                         <img
@@ -114,7 +127,11 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="dropdown-item border-radius-md" href="javascript:;">
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                  >
                     <div className="py-1 d-flex">
                       <div className="my-auto">
                         <img
@@ -137,7 +154,11 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item border-radius-md" href="javascript:;">
+                  <a
+                    className="dropdown-item border-radius-md"
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                  >
                     <div className="py-1 d-flex">
                       <div
                         className="my-auto avatar avatar-sm bg-gradient-secondary me-3"
@@ -153,14 +174,14 @@ export default function Navbar() {
                           <title>credit-card</title>
                           <g
                             stroke="none"
-                            stroke-width="1"
+                            strokeWidth="1"
                             fill="none"
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                           >
                             <g
                               transform="translate(-2169.000000, -745.000000)"
                               fill="#FFFFFF"
-                              fill-rule="nonzero"
+                              fillRule="nonzero"
                             >
                               <g transform="translate(1716.000000, 291.000000)">
                                 <g transform="translate(453.000000, 454.000000)">

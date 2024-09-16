@@ -9,8 +9,8 @@ interface Props {
 
 export default function Sidenav({ customClass, className }: Props) {
   const { layout, darkMode, isRTL, sidebarType } = useSelector((state: RootState) => state.theme)
-  const logoWhite = new URL('@/assets/img/logo-ct-dark.png', import.meta.url).href
-  const logo = new URL('@/assets/img/logo-ct.png', import.meta.url).href
+  const logoWhite = new URL('@/assets/img/logo-ct.png', import.meta.url).href
+  const logo = new URL('@/assets/img/logo-ct-dark.png', import.meta.url).href
 
   return (
     <>

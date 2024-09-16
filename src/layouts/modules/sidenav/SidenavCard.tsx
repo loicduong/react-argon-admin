@@ -29,7 +29,7 @@ export default function SidenavCard({ className }: Props) {
 
         {
           isRTL
-            ? <p className="text-xs font-weight-bold">يرجى التحقق من مستندانا</p>
+            ? <p className="text-xs font-weight-bold">يرجى التحقق من مستنداتنا</p>
             : <p className="text-xs font-weight-bold">Please check our docs</p>
         }
       </div>

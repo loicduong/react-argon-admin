@@ -19,8 +19,8 @@ export default function SidenavItem({ url, navText, className, icon }: Props) {
         {icon}
       </div>
       <span
-        className={"nav-link-text" + (isRTL ? " me-1" : "ms-1")}
-    >
+        className={`nav-link-text ${isRTL ? " me-1" : "ms-1"}`}
+      >
         {navText}
       </span>
     </Link>

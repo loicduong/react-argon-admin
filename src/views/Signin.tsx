@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/common/Navbar";
 import ArgonInput from "@/components/ArgonInput";
 import ArgonSwitch from "@/components/ArgonSwitch";
-import ArgonButton from "@/components/ArgonButton";
+import ArgonButton from "@/components/base/ArgonButton";
 import { useDispatch } from "react-redux";
 import {
   setHideConfigButton,
@@ -78,7 +78,8 @@ export default function Signin() {
                     <div className="px-1 pt-0 text-center card-footer px-lg-2">
                       <p className="mx-auto mb-4 text-sm">
                         Don't have an account? <a
-                          href="javascript:;"
+                          href="#"
+                          onClick={(e) => e.preventDefault()}
                           className="text-success text-gradient font-weight-bold"
                         >
                           Sign up

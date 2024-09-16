@@ -17,6 +17,7 @@ interface ThemeState {
   showMain: boolean
   layout: string
   isTransparent?: string
+  navbarFixedClass?: string
 }
 
 const initialState: ThemeState = {
@@ -85,13 +86,29 @@ export const themeSlice = createSlice({
     setHideConfigButton(state, action: PayloadAction<boolean>) {
       state.hideConfigButton = action.payload;
     },
+    setLayout(state, action: PayloadAction<string>) {
+      state.layout = action.payload;
+    },
+    setIsPinned(state, action: PayloadAction<boolean>) {
+      state.isPinned = action.payload;
+    },
+    setIsTransparent(state, action: PayloadAction<string>) {
+      state.isTransparent = action.payload;
+    },
+    setRtl(state, action: PayloadAction<boolean>) {
+      state.isRTL = action.payload;
+    }
   }
 })
 
 export const {
   navbarMinimize,
   setHideConfigButton,
+  setIsPinned,
+  setIsTransparent,
+  setLayout,
   setMcolor,
+  setRtl,
   setShowFooter,
   setShowNavbar,
   setShowSidenav,

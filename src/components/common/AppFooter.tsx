@@ -46,7 +46,8 @@ export default function AppFooter() {
             {
               pages.map((page) => (
                 <a
-                  href="javascript:;"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   key={page.label}
                   target="_blank"
                   className="mb-2 text-secondary me-xl-5 me-3 mb-sm-0"
@@ -60,7 +61,8 @@ export default function AppFooter() {
             {
               socials.map((social) => (
                 <a
-                  href="javascript:;"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   key={social.icon}
                   className="text-secondary me-xl-4 me-4"

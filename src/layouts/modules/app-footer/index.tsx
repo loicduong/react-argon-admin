@@ -23,17 +23,13 @@ export default function AppFooter({ className }: Props) {
             <div
               className={`text-sm text-center copyright text-muted ${isRTL ? 'text-lg-end' : 'text-lg-start'}`}
             >
-              ©
-              { new Date().getFullYear() }, made with
-              <i className="fa fa-heart"></i> by
-              <a
+              © { new Date().getFullYear() }, made with <i className="fa fa-heart"></i> by <a
                 href="https://www.creative-tim.com"
                 className="font-weight-bold"
                 target="_blank"
               >
                 Creative Tim
-              </a>
-              for a better web.
+              </a> for a better web.
             </div>
           </div>
           <div className="col-lg-6">
